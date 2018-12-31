@@ -12,4 +12,7 @@
             </span>
         </span>
     </p>
+    {{ if and (.Site.Params.mathjax.enable) (.Params.mathjax) }}
+        {{ (partial "_third_party/mathjax.html" .) | safeHTML }}
+    {{ end }}
 </header>
